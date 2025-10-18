@@ -8,19 +8,19 @@
 
   <body>
     <header class="page-header">
-      <a class="header-logo">
+      <a href="index.html" class="header-logo">
         <img src="#" alt="логотип сайта">
       </a>
       <nav class="nav">
         <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link">Главная</a>
+          <li class="nav-item active">
+            <a href="index.html" class="nav-link">Главная</a>
           </li>
           <li class="nav-item">
-            <a href="/about" class="nav-link">О Седоне</a>
+            <a href="#" class="nav-link">О Седоне</a>
           </li>
           <li class="nav-item">
-            <a href="/hotel" class="nav-link">Гостиница</a>
+            <a href="catalog.html" class="nav-link">Гостиницы</a>
           </li>
         </ul>
       </nav>
@@ -34,10 +34,11 @@
           <li class="control-item">
             <a href="#" class="control-link">
               <span class="icon icon-favourites">Избранное</span>
+              <span class="notification-badge">12</span>
             </a>
           </li>
           <li class="control-item">
-            <button class="btn btn-control" onclick="openModalWindow()">Хочу сюда!</button>
+            <button class="btn btn-control">Хочу сюда!</button>
           </li>
         </ul>
       </div>
@@ -123,7 +124,7 @@
         <h2 class="subscription-title">Подпишитесь на рассылку</h2>
         <p class="subscription-desctiption">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form action="https://echo.htmlacademy.ru/" target="_blank">
-          <input type="email" name="email-field" placeholder="Ваш e-mail">
+          <input type="email" name="email-field" placeholder="Ваш e-mail" required>
           <input type="submit" name="btn-submit" class="btn btn-submit" value="Подписаться">
         </form>
       </section>
@@ -133,23 +134,25 @@
       <div class="footer-content">
         <ul class="social-list">
           <li class="social-item">
-            <a href="https://vk.com/" class="social-link">
+            <a href="https://vk.com/htmlacademy" class="social-link">
               <span class="icon icon-vk">vk</span>
             </a>
           </li>
           <li class="social-item">
-            <a href="https://web.telegram.org/" class="social-link">
+            <a href="https://t.me/htmlacademy" class="social-link">
               <span class="icon icon-tg">telegram</span>
             </a>
           </li>
           <li class="social-item">
-            <a href="https://www.youtube.com/" class="social-link">
+            <a href="https://www.youtube.com/user/htmlacademyru" class="social-link">
               <span class="icon icon-youtube">youtube</span>
             </a>
           </li>
         </ul>
-        <a href="tel:+79999999999" class="tel-link">+7 (812) 812-12-12</a>
-        <img class="copyright" src="#" alt="логотип .html academy">
+        <a href="tel:+78128121212" class="tel-link">+7 (812) 812-12-12</a>
+        <a href="https://htmlacademy.ru/" class="logo">
+          <img class="copyright" src="#" alt="логотип .html academy">
+        </a>
       </div>
     </footer>
   </body>
