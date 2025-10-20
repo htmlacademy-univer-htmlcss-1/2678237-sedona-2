@@ -8,7 +8,9 @@
 <body>
   <header class="page-header">
     <a href="index.html" class="header-logo">
-      <img src="images/logo.svg" width="140" height="70" alt="логотип сайта">
+      <svg width="140" height="70">
+        <use href="images/logos/logo.svg"></use>
+      </svg>
     </a>
     <nav class="nav">
       <ul class="nav-list">
@@ -27,12 +29,16 @@
       <ul class="control-list">
         <li class="control-item">
           <a href="#" class="control-link">
-            <img src="images/search.svg" width="20" height="20" class="icon icon-search" alt="Иконка поиска">
+            <svg width="20" height="20">
+              <use href="images/icons/search.svg"></use>
+            </svg>
           </a>
         </li>
         <li class="control-item">
           <a href="#" class="control-link">
-            <img src="images/heart.svg" width="20" height="20" class="icon icon-favourites" alt="Избранное">
+            <svg width="20" height="20">
+              <use href="images/icons/heart.svg"></use>
+            </svg>
             <span class="notification-badge">12</span>
           </a>
         </li>
@@ -49,11 +55,15 @@
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="index.html">
-            <img class="icon" src="images/home.svg" width="20" height="20" alt="Вернуться на главную">
+            <svg width="20" height="20">
+              <use href="images/icons/home.svg"></use>
+            </svg>
           </a>
         </li>
         <li class="breadcrumbs-item">
-          <img class="icon" src="images/arrow.svg" width="20" height="20" alt="Стрелка">
+          <svg width="20" height="20">
+            <use href="images/icons/arrow.svg"></use>
+          </svg>
         </li>
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="#">Каталог</a>
@@ -64,42 +74,42 @@
     <section class="catalog-products">
       <form class="catalog-filter" action="https://echo.htmlacademy.ru/" target="_blank" method="get">
         <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Инфраструктура:</legend>
-            <ul class="catalog-filter-list">
-                <li class="catalog-filter-item">
-                    <label class="filter-control">
-                        <input type="checkbox" name="swimpool-field" value="Бассейн" checked> Бассейн
-                    </label>
-                </li>
-                <li class="catalog-filter-item">
-                    <label class="filter-control">
-                        <input type="checkbox" name="parking-field" value="Парковка" checked> Парковка
-                    </label>
-                </li>
-                <li class="catalog-filter-item">
-                    <label class="filter-control">
-                        <input type="checkbox" name="wifi-field" value="wi-fi"> wi-fi
-                    </label>
-                </li>
-            </ul>
+          <legend class="catalog-filter-title">Инфраструктура:</legend>
+          <ul class="catalog-filter-list">
+            <li class="catalog-filter-item">
+              <label class="filter-control">
+                <input type="checkbox" name="swimpool-field" value="Бассейн" checked> Бассейн
+              </label>
+            </li>
+            <li class="catalog-filter-item">
+              <label class="filter-control">
+                <input type="checkbox" name="parking-field" value="Парковка" checked> Парковка
+              </label>
+            </li>
+            <li class="catalog-filter-item">
+              <label class="filter-control">
+                <input type="checkbox" name="wifi-field" value="wi-fi"> wi-fi
+              </label>
+            </li>
+          </ul>
         </fieldset>
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Тип жилья:</legend>
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
-                <label class="filter-control">
-                    <input type="radio" name="housing-type" value="Гостиница" checked> Гостиница
-                </label>
+              <label class="filter-control">
+                <input type="radio" name="housing-type" value="Гостиница" checked> Гостиница
+              </label>
             </li>
             <li class="catalog-filter-item">
-                <label class="filter-control">
-                    <input type="radio" name="housing-type" value="Мотель"> Мотель
-                </label>
+              <label class="filter-control">
+                <input type="radio" name="housing-type" value="Мотель"> Мотель
+              </label>
             </li>
             <li class="catalog-filter-item">
-                <label class="filter-control">
-                    <input type="radio" name="housing-type" value="Апартаменты"> Апартаменты
-                </label>
+              <label class="filter-control">
+                <input type="radio" name="housing-type" value="Апартаменты"> Апартаменты
+              </label>
             </li>
           </ul>
         </fieldset>
@@ -135,17 +145,23 @@
         <ul class="control-view-product">
           <li class="control-view-item">
             <button class="btn-control-view active">
-              <img class="icon" src="images/view-icon-1.svg" width="16" height="14" alt="Отображение сеткой">
+              <svg width="16" height="14">
+                <use href="images/icons/view-icon-1.svg"></use>
+              </svg>
             </button>
           </li>
           <li class="control-view-item">
             <button class="btn-control-view">
-              <img class="icon" src="images/view-icon-2.svg" width="16" height="14" alt="Полноэкранный режим">
+              <svg width="16" height="14">
+                <use href="images/icons/view-icon-2.svg"></use>
+              </svg>
             </button>
           </li>
           <li class="control-view-item">
             <button class="btn-control-view">
-              <img class="icon" src="images/view-icon-3.svg" width="16" height="14" alt="Отображение списком">
+              <svg width="16" height="14">
+                <use href="images/icons/view-icon-3.svg"></use>
+              </svg>
             </button>
           </li>
         </ul>
@@ -154,7 +170,7 @@
       <ul class="product-list">
         <li class="product-item">
           <div class="carc-product">
-            <img src="#" alt="Звездное небо среди гор">
+            <img src="/images/cards/hotel-1.jpg" width="300" height="212" alt="Звездное небо среди гор">
             <h3 class="card-title">Amara Resort & Spa</h3>
             <p class="card-desc">Гостиница <span class="cost-product">от 4000</span></p>
             <div class="card-control">
@@ -164,19 +180,29 @@
             <div class="rating-block">
               <ul class="rating-star-list">
                 <li class="start-list-item">
-                  <img class="icon" src="images/icon-star.svg" width="18" height="17" alt="Звезда">
+                  <svg width="18" height="17">
+                    <use href="images/icons/icon-star.svg"></use>
+                  </svg>
                 </li>
                 <li class="start-list-item">
-                  <img class="icon" src="images/icon-star.svg" width="18" height="17" alt="Звезда">
+                  <svg width="18" height="17">
+                    <use href="images/icons/icon-star.svg"></use>
+                  </svg>
                 </li>
                 <li class="start-list-item">
-                  <img class="icon" src="images/icon-star.svg" width="18" height="17" alt="Звезда">
+                  <svg width="18" height="17">
+                    <use href="images/icons/icon-star.svg"></use>
+                  </svg>
                 </li>
                 <li class="start-list-item">
-                  <img class="icon" src="images/icon-star.svg" width="18" height="17" alt="Звезда">
+                  <svg width="18" height="17">
+                    <use href="images/icons/icon-star.svg"></use>
+                  </svg>
                 </li>
                 <li class="start-list-item hidden">
-                  <img class="icon" src="images/icon-star.svg" width="18" height="17" alt="Звезда">
+                  <svg width="18" height="17">
+                    <use href="images/icons/icon-star.svg"></use>
+                  </svg>
                 </li>
               </ul>
               <p class="btn btn-total-rating">Рейтинг: <span>8,5</span></p>
@@ -186,7 +212,7 @@
 
         <li class="product-item">
           <div class="carc-product">
-            <img src="#" alt="Пейзаж гор с радугой">
+            <img src="/images/cards/hotel-2.jpg" width="300" height="212" alt="Пейзаж гор с радугой">
             <h3 class="card-title">Villas at Poco Diablo</h3>
             <p class="card-desc">Гостиница <span class="cost-product">от </span></p>
             <div class="card-control">
@@ -196,19 +222,29 @@
             <div class="rating-block">
               <ul class="rating-star-list">
                 <li class="start-list-item">
-                  <img class="icon" src="images/icon-star.svg" width="18" height="17" alt="Звезда">
+                  <svg width="18" height="17">
+                    <use href="images/icons/icon-star.svg"></use>
+                  </svg>
                 </li>
                 <li class="start-list-item">
-                  <img class="icon" src="images/icon-star.svg" width="18" height="17" alt="Звезда">
+                  <svg width="18" height="17">
+                    <use href="images/icons/icon-star.svg"></use>
+                  </svg>
                 </li>
                 <li class="start-list-item">
-                  <img class="icon" src="images/icon-star.svg" width="18" height="17" alt="Звезда">
+                  <svg width="18" height="17">
+                    <use href="images/icons/icon-star.svg"></use>
+                  </svg>
                 </li>
                 <li class="start-list-item">
-                  <img class="icon" src="images/icon-star.svg" width="18" height="17" alt="Звезда">
+                  <svg width="18" height="17">
+                    <use href="images/icons/icon-star.svg"></use>
+                  </svg>
                 </li>
                 <li class="start-list-item hidden">
-                  <img class="icon" src="images/icon-star.svg" width="18" height="17" alt="Звезда">
+                  <svg width="18" height="17">
+                    <use href="images/icons/icon-star.svg"></use>
+                  </svg>
                 </li>
               </ul>
               <p class="btn btn-total-rating">Рейтинг: <span>9,2</span></p>
@@ -218,7 +254,7 @@
 
         <li class="product-item">
           <div class="carc-product">
-            <img src="#" alt="Большие горы днем">
+            <img src="/images/cards/hotel-3.jpg" width="300" height="212" alt="Большие горы днем">
             <h3 class="card-title">Desert Quail Inn</h3>
             <p class="card-desc">Гостиница <span class="cost-product">от </span></p>
             <div class="card-control">
@@ -228,19 +264,29 @@
             <div class="rating-block">
               <ul class="rating-star-list">
                 <li class="start-list-item">
-                  <img class="icon" src="images/icon-star.svg" width="18" height="17" alt="Звезда">
+                  <svg width="18" height="17">
+                    <use href="images/icons/icon-star.svg"></use>
+                  </svg>
                 </li>
                 <li class="start-list-item">
-                  <img class="icon" src="images/icon-star.svg" width="18" height="17" alt="Звезда">
+                  <svg width="18" height="17">
+                    <use href="images/icons/icon-star.svg"></use>
+                  </svg>
                 </li>
                 <li class="start-list-item">
-                  <img class="icon" src="images/icon-star.svg" width="18" height="17" alt="Звезда">
+                  <svg width="18" height="17">
+                    <use href="images/icons/icon-star.svg"></use>
+                  </svg>
                 </li>
                 <li class="start-list-item hidden">
-                  <img class="icon" src="images/icon-star.svg" width="18" height="17" alt="Звезда">
+                  <svg width="18" height="17">
+                    <use href="images/icons/icon-star.svg"></use>
+                  </svg>
                 </li>
                 <li class="start-list-item hidden">
-                  <img class="icon" src="images/icon-star.svg" width="18" height="17" alt="Звезда">
+                  <svg width="18" height="17">
+                    <use href="images/icons/icon-star.svg"></use>
+                  </svg>
                 </li>
               </ul>
               <p class="btn btn-total-rating">Рейтинг: <span>6,9</span></p>
@@ -250,7 +296,7 @@
 
         <li class="product-item">
           <div class="carc-product">
-            <img src="#" alt="Оранжевые горы со зведным небом">
+            <img src="/images/cards/hotel-4.jpg" width="300" height="212" alt="Оранжевые горы со зведным небом">
             <h3 class="card-title">GreenTree Inn</h3>
             <p class="card-desc">Гостиница <span class="cost-product">от </span></p>
             <div class="card-control">
@@ -260,19 +306,29 @@
             <div class="rating-block">
               <ul class="rating-star-list">
                 <li class="start-list-item">
-                  <img class="icon" src="images/icon-star.svg" width="18" height="17" alt="Звезда">
+                  <svg width="18" height="17">
+                    <use href="images/icons/icon-star.svg"></use>
+                  </svg>
                 </li>
                 <li class="start-list-item">
-                  <img class="icon" src="images/icon-star.svg" width="18" height="17" alt="Звезда">
+                  <svg width="18" height="17">
+                    <use href="images/icons/icon-star.svg"></use>
+                  </svg>
                 </li>
                 <li class="start-list-item hidden">
-                  <img class="icon" src="images/icon-star.svg" width="18" height="17" alt="Звезда">
+                  <svg width="18" height="17">
+                    <use href="images/icons/icon-star.svg"></use>
+                  </svg>
                 </li>
                 <li class="start-list-item hidden">
-                  <img class="icon" src="images/icon-star.svg" width="18" height="17" alt="Звезда">
+                  <svg width="18" height="17">
+                    <use href="images/icons/icon-star.svg"></use>
+                  </svg>
                 </li>
                 <li class="start-list-item hidden">
-                  <img class="icon" src="images/icon-star.svg" width="18" height="17" alt="Звезда">
+                  <svg width="18" height="17">
+                    <use href="images/icons/icon-star.svg"></use>
+                  </svg>
                 </li>
               </ul>
               <p class="btn btn-total-rating">Рейтинг: <span>5,0</span></p>
@@ -307,8 +363,8 @@
       <h2 class="subscription-title">Подпишитесь на рассылку</h2>
       <p class="subscription-desctiption">Только полезная информация и никакого спама, честное бойскаутское!</p>
       <form action="https://echo.htmlacademy.ru/" target="_blank">
-          <input type="email" name="email-field" placeholder="Ваш e-mail" required>
-          <input type="submit" name="btn-submit" class="btn btn-submit" value="Подписаться">
+        <input type="email" name="email-field" placeholder="Ваш e-mail" required>
+        <input type="submit" name="btn-submit" class="btn btn-submit" value="Подписаться">
       </form>
     </section>
   </main>
@@ -318,23 +374,31 @@
       <ul class="social-list">
         <li class="social-item">
           <a href="https://vk.com/htmlacademy" class="social-link">
-            <img class="icon" src="images/social-vk.svg" width="25" height="15" alt="VK">
+            <svg width="24" height="14">
+              <use href="images/icons/social-vk.svg"></use>
+            </svg>
           </a>
         </li>
         <li class="social-item">
           <a href="https://t.me/htmlacademy" class="social-link">
-            <img class="icon" src="images/social-tg.svg" width="25" height="15" alt="Telegram">
+            <svg width="18" height="16">
+              <use href="images/icons/social-tg.svg"></use>
+            </svg>
           </a>
         </li>
         <li class="social-item">
           <a href="https://www.youtube.com/user/htmlacademyru" class="social-link">
-            <img class="icon" src="images/social-youtube.svg" width="25" height="15" alt="YouTube">
+            <svg width="22" height="17">
+              <use href="images/icons/social-youtube.svg"></use>
+            </svg>
           </a>
         </li>
       </ul>
       <a href="tel:+78128121212" class="tel-link">+7 (812) 812-12-12</a>
       <a href="https://htmlacademy.ru/" class="logo">
-        <img class="copyright" src="images/logo-html-academy.svg" width="115" height="34" alt="логотип .html academy">
+        <svg width="115" height="34">
+          <use href="images/logos/logo-html-academy.svg"></use>
+        </svg>
       </a>
     </div>
   </footer>
