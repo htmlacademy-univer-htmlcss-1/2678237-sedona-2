@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css">
   <title>Каталог</title>
 </head>
 <body>
@@ -51,7 +52,7 @@
 
   <main class="main-inner">
     <header class="inner-header">
-      <h1 class="inner-header-title">Гостиницы Седоны</h1>
+      <h1 class="title-section">Гостиницы Седоны</h1>
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="index.html">
@@ -69,12 +70,10 @@
           <a class="breadcrumbs-link" href="#">Каталог</a>
         </li>
       </ul>
-    </header>
 
-    <section class="catalog-products">
       <form class="catalog-filter" action="https://echo.htmlacademy.ru/" target="_blank" method="get">
         <fieldset class="catalog-filter-group">
-          <legend class="catalog-filter-title">Инфраструктура:</legend>
+          <legend class="filter-title">Инфраструктура:</legend>
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
               <label class="filter-control">
@@ -94,7 +93,7 @@
           </ul>
         </fieldset>
         <fieldset class="catalog-filter-group">
-          <legend class="catalog-filter-title">Тип жилья:</legend>
+          <legend class="filter-title">Тип жилья:</legend>
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
               <label class="filter-control">
@@ -114,7 +113,7 @@
           </ul>
         </fieldset>
         <fieldset class="catalog-filter-group">
-          <legend class="catalog-filter-title">Стоимость, &#8381;:</legend>
+          <legend class="filter-title">Стоимость, &#8381;:</legend>
           <div class="range-container">
             <div class="input-box">
               <input type="number" id="minRangeInput" value="0" min="0" max="100000">
@@ -131,11 +130,13 @@
           </div>
         </fieldset>
         <input class="btn btn-submit" type="submit">
-        <button class="btn btn-transparent" onclick="resetForm()">Сбросить</button>
+        <button class="btn btn-transparent">Сбросить</button>
       </form>
+    </header>
 
+    <section class="catalog-products">
       <div class="search-results-header">
-        <h2 class="search-results-title">Найдено гостиниц: <span class="search-results-count">38</span></h2>
+        <h2 class="headline">Найдено гостиниц: <span class="search-results-count">38</span></h2>
         <select class="select-control">
           <option value="popular">Сначала популярное</option>
           <option value="cheap" selected>Сначала дешёвое</option>
@@ -169,10 +170,10 @@
 
       <ul class="product-list">
         <li class="product-item">
-          <div class="carc-product">
+          <div class="card-product">
             <img src="images/cards/hotel-1.jpg" width="300" height="212" alt="Звездное небо среди гор">
             <h3 class="card-title">Amara Resort & Spa</h3>
-            <p class="card-desc">Гостиница <span class="cost-product">от 4000</span></p>
+            <p class="card-desc">Гостиница <span class="cost-product">от 4000 &#8381;</span></p>
             <div class="card-control">
               <a href="#" class="btn card-details">Подробнее</a>
               <button class="btn btn-favorite">В избранное</button>
@@ -211,10 +212,10 @@
         </li>
 
         <li class="product-item">
-          <div class="carc-product">
+          <div class="card-product">
             <img src="images/cards/hotel-2.jpg" width="300" height="212" alt="Пейзаж гор с радугой">
             <h3 class="card-title">Villas at Poco Diablo</h3>
-            <p class="card-desc">Гостиница <span class="cost-product">от </span></p>
+            <p class="card-desc">Гостиница <span class="cost-product">от 5000 &#8381;</span></p>
             <div class="card-control">
               <a href="#" class="btn card-details">Подробнее</a>
               <button class="btn btn-favorite-primary">В избранном</button>
@@ -253,10 +254,10 @@
         </li>
 
         <li class="product-item">
-          <div class="carc-product">
+          <div class="card-product">
             <img src="images/cards/hotel-3.jpg" width="300" height="212" alt="Большие горы днем">
             <h3 class="card-title">Desert Quail Inn</h3>
-            <p class="card-desc">Гостиница <span class="cost-product">от </span></p>
+            <p class="card-desc">Гостиница <span class="cost-product">от 2500 &#8381;</span></p>
             <div class="card-control">
               <a href="#" class="btn card-details">Подробнее</a>
               <button class="btn btn-favorite">В избранное</button>
@@ -295,10 +296,10 @@
         </li>
 
         <li class="product-item">
-          <div class="carc-product">
+          <div class="card-product">
             <img src="images/cards/hotel-4.jpg" width="300" height="212" alt="Оранжевые горы со зведным небом">
             <h3 class="card-title">GreenTree Inn</h3>
-            <p class="card-desc">Гостиница <span class="cost-product">от </span></p>
+            <p class="card-desc">Гостиница <span class="cost-product">от 1500 &#8381;</span></p>
             <div class="card-control">
               <a href="#" class="btn card-details">Подробнее</a>
               <button class="btn btn-favorite">В избранное</button>
@@ -359,9 +360,9 @@
       </ul>
     </section>
 
-    <section class="subscription">
-      <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-      <p class="subscription-desctiption">Только полезная информация и никакого спама, честное бойскаутское!</p>
+    <section class="subscription plain">
+      <h2 class="headline">Подпишитесь на рассылку</h2>
+      <p class="headline-desc">Только полезная информация и никакого спама, честное бойскаутское!</p>
       <form action="https://echo.htmlacademy.ru/" target="_blank">
         <input type="email" name="email-field" placeholder="Ваш e-mail" required>
         <input type="submit" name="btn-submit" class="btn btn-submit" value="Подписаться">
