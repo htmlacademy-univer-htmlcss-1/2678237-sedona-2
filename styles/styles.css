@@ -16,12 +16,28 @@
 
 /* базовые стили */
 
+html {
+  height: 100%;
+}
+
 body {
+  min-height: 100%;
+  margin: 0;
+
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  color: rgba(0, 0, 0, 1);
-  background-color: rgba(255, 255, 255, 1);
+
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
 }
 
 a {
@@ -36,31 +52,8 @@ input {
   letter-spacing: 0;
 }
 
-/* header */
-
-.page-header {
-  color: rgba(0, 0, 0, 1);
-  background-color: rgba(255, 255, 255, 1);
-}
-
-.nav-item .nav-link {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  color: rgba(0, 0, 0, 1);
-}
-
-.notification-badge {
-  display: inline-block;
-  padding: 0 5px;
-  border-radius: 50%;
-
-  text-align: center;
-  font-weight: 400;
-  font-size: 10px;
-  color: rgba(255, 255, 255, 1);
-
-  background-color: rgba(125, 181, 79, 1);
+.visually-hidden {
+  display: none;
 }
 
 /* button */
@@ -75,20 +68,103 @@ input {
   line-height: 20px;
   text-transform: uppercase;
 
-  background-color: rgba(117, 97, 87, 1);
-  color: rgba(255, 255, 255, 1);
+  background-color: #756157;
+  color: #ffffff;
+}
+
+/* header */
+.page-header {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.header-logo {
+  margin-right: 30px;
+}
+
+.header-logo svg {
+  display: block;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  width: 339px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: 20px 16px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #000000;
+}
+
+.nav-control {
+  width: 268px;
+  margin: 0 0 0 auto;
+}
+
+.nav-control .nav-link {
+  padding: 22px 12px;
+}
+
+.nav-item .btn {
+  padding: 8px 34px;
+  margin-left: 20px;
+
+  text-align: center;
+}
+
+.notification-badge {
+  display: inline-block;
+  padding: 0 5px;
+  border-radius: 50%;
+
+  text-align: center;
+  font-weight: 400;
+  font-size: 10px;
+  color: #ffffff;
+
+  background-color: #7db54f;
+}
+
+/* main-inner */
+
+.main-inner {
+  flex: 1 0 auto;
 }
 
 /* блок welcome */
 
 .welcome-block {
-  background: rgba(131, 179, 211, 0.2) url("../images/ui-background/bg_welcome.jpg") no-repeat center center;
+  margin: 0 auto;
+  background-color: rgba(131, 179, 211, 0.2);
+  background-image: url("../images/ui-background/bg_welcome.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .welcome-block svg {
   display: block;
-  margin: auto;
+  margin: 0 auto;
+  padding-top: 51px;
+  padding-bottom: 82px;
 }
 
 /* типографика */
@@ -97,7 +173,7 @@ input {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
-  color: rgba(255, 255, 255, 1);
+  color: #ffffff;
 }
 
 .headline {
@@ -107,7 +183,7 @@ input {
   letter-spacing: 0;
   text-align: center;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
 }
 
 .headline-desc {
@@ -116,7 +192,7 @@ input {
   line-height: 26px;
   letter-spacing: 0;
   text-align: center;
-  color: rgba(51, 51, 51, 1);
+  color: #333333;
 }
 
 .list-item-title {
@@ -126,7 +202,7 @@ input {
   letter-spacing: 0;
   text-align: center;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
 }
 
 .list-item-desc {
@@ -135,31 +211,54 @@ input {
   line-height: 21px;
   letter-spacing: 0;
   text-align: center;
-  color: rgba(51, 51, 51, 1);
+  color: #333333;
 }
 
 .filter-title {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  color: rgba(255, 255, 255, 1);
+  color: #ffffff;
 }
 
 .card-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
 }
 
 .card-desc {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  color: rgba(51, 51, 51, 1);
+  color: #333333;
 }
 
 /* advantages */
+
+.advantages {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.advantage-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.advantage-item {
+  display: flex;
+  flex-grow: 1;
+}
+
+.advantage-item img {
+  display: block;
+}
 
 .advantage-item:nth-child(odd) {
   background-color: rgba(131, 179, 211, 0.12);
@@ -171,14 +270,14 @@ input {
 
 .advantage-item:first-child,
 .advantage-item:last-child {
-  background-color: rgba(130, 179, 211, 1);
+  background-color: #82b3d3;
 }
 
 .advantage-item:first-child .list-item-title,
 .advantage-item:first-child .list-item-desc,
 .advantage-item:last-child .list-item-title,
 .advantage-item:last-child .list-item-desc {
-  color: rgba(255, 255, 255, 1);
+  color: #ffffff;
 }
 
 .line-separation {
@@ -191,34 +290,73 @@ input {
   border-color: rgba(255, 255, 255, 0.3);
 }
 
+/* блок conditions */
+
+.conditions {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.condition-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.condition-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.condition-item:nth-child(odd) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
 /* subscription */
 
 .subscription {
-  background: rgba(130, 179, 211, 1) url("../images/ui-background/bg_filters.jpg") no-repeat center center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+  background: #82b3d3 url("../images/ui-background/bg_filters.jpg") no-repeat center center;
   background-size: cover;
 }
 
 .subscription .headline,
 .subscription .headline-desc {
-  color: rgba(255, 255, 255, 1);
+  color: #ffffff;
 }
 
 .subscription.plain {
-  background: rgba(255, 255, 255, 1);
+  background: #ffffff;
 }
 
 .subscription.plain .headline {
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
 }
 
 .subscription.plain .headline-desc {
-  color: rgba(51, 51, 51, 1);
+  color: #333333;
 }
 
 /* inner-header */
 
 .inner-header {
-  background: rgba(130, 179, 211, 1) url("../images/ui-background/bg_filters.jpg") no-repeat center center;
+  background: #82b3d3 url("../images/ui-background/bg_filters.jpg") no-repeat center center;
   background-size: cover;
 }
 
@@ -227,13 +365,13 @@ input {
   font-size: 16px;
   line-height: 21px;
   text-decoration: none;
-  color: rgba(255, 255, 255, 1);
+  color: #ffffff;
 }
 
 .catalog-filter label {
   font-weight: 400;
   font-size: 18px;
-  color: rgba(255, 255, 255, 1);
+  color: #ffffff;
 }
 
 .range-container input {
@@ -241,13 +379,13 @@ input {
   font-size: 18px;
   line-height: 24px;
 
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
 }
 
 .range-container span {
   font-weight: 400;
   font-size: 18px;
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
 }
 
 /* catalog products */
@@ -259,31 +397,54 @@ input {
 /* pagination */
 
 .pagination-item {
-  background-color: rgba(130, 179, 211, 1);
+  background-color: #82b3d3;
 }
 
 .pagination-link {
   text-decoration: none;
-  color: rgba(255, 255, 255, 1);
+  color: #ffffff;
 }
 
 .pagination-item.active {
-  background-color: rgba(242, 242, 242, 1);
+  background-color: #f2f2f2;
 }
 
 .pagination-item.active .pagination-link {
-  color: rgba(51, 51, 51, 1);
+  color: #333333;
 }
 
 .pagination-item.disabled {
-  background-color: rgba(242, 242, 242, 1);
+  background-color: #f2f2f2;
 }
 
 .pagination-item.disabled .pagination-link {
-  color: rgba(51, 51, 51, 1);
+  color: #333333;
 }
 
 /* footer */
+
+.footer-page {
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1060px;
+  margin: 40px auto 30px;
+}
+
+.social-list {
+  display: flex;
+  align-items: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-link {
+  padding: 12px 13px;
+}
 
 .footer-content .tel-link {
   text-decoration: none;
@@ -291,5 +452,9 @@ input {
   font-size: 40px;
   text-align: center;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
+}
+
+.footer-content .logo svg {
+  display: block;
 }
