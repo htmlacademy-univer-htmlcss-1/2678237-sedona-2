@@ -237,11 +237,14 @@ input {
 .nav-list {
   display: flex;
   flex-wrap: wrap;
-  width: 339px;
   margin: 0;
   padding: 0;
 
   list-style: none;
+}
+
+.nav-item.active {
+  border-bottom: 2px solid #756257;
 }
 
 .nav-link {
@@ -255,29 +258,30 @@ input {
   color: #000000;
 }
 
-.nav-control {
+.user-control {
+  display: flex;
   align-items: flex-start;
-  width: 268px;
   margin: 0 0 0 auto;
 }
 
-.nav-control-wrapper {
+.nav-control {
   display: flex;
   align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-control .nav-item:last-child {
+  margin-left: 20px;
 }
 
 .nav-control .nav-link {
   padding: 22px 12px;
 }
 
-.nav-item.active {
-  border-bottom: 2px solid #756257;
-}
-
-.nav-item .btn {
+.user-control .btn {
   padding: 8px 34px;
-  margin-left: 20px;
-
   text-align: center;
 }
 
