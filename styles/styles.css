@@ -265,6 +265,7 @@ input {
 }
 
 .nav-control {
+  min-width: 268px;
   display: flex;
   align-items: center;
   margin: 0;
