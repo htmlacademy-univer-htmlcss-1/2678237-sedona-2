@@ -631,12 +631,14 @@ input {
   display: flex;
   align-items: center;
   gap: 8px;
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
 .product-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 20px;
   margin: 0;
   padding: 0;
@@ -644,38 +646,91 @@ input {
 }
 
 .card-product {
-  width: 340px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "image   image"
+    "title   title"
+    "info    info"
+    "btn1    btn2"
+    "stars   total";
   gap: 16px;
-  border: 1px solid #E6E6E6;
   padding: 20px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  background: #fff;
+  max-width: 380px;
 }
 
-.card-control {
+.card-product img {
+  grid-area: image;
+}
+
+.card-product h3 {
+  grid-area: title;
+  margin: 0;
+}
+.card-product .card-info {
+  grid-area: info;
   display: flex;
+  justify-content: space-between;
+}
+.card-product .card-control {
+  grid-area: btn1 / btn1 / btn2 / btn2;;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.card-product .rating-block {
+  grid-area: stars / stars / total / total;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 20px;
 }
 
-.rating-block {
-  display: flex;
-  gap: 20px;
-}
-
-.rating-star-list {
-  display: flex;
+.card-info p {
   padding: 0;
-  list-style: none;
+  margin: 0;
+}
+
+.card-details {
+  grid-area: btn1;
+}
+.btn-favorite {
+  grid-area: btn2;
+}
+
+.btn-total-rating {
+  grid-area: total;
 }
 
 .btn.btn-total-rating {
-  padding: 0;
   margin: 0;
-
   font-weight: 400;
   color: #333333;
   background: #F2F2F2;
+}
+
+.card-product .btn {
+  width: 100%;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.rating-star-list {
+  width: 100%;
+  grid-area: stars;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.start-list-item.hidden {
+  display: none;
 }
 
 /* pagination */
