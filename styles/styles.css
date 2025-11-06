@@ -795,53 +795,50 @@ input {
   list-style: none;
 }
 
-.card-product {
+.product-item {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 140px);
+  grid-template-rows: 212px 1fr;
   grid-template-areas:
     "image   image"
     "title   title"
-    "info    info"
+    "type    price"
     "btn1    btn2"
     "stars   total";
-  gap: 16px;
+  gap: 16px 20px;
   padding: 20px;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
   background: #fff;
-  max-width: 380px;
 }
 
-.card-product img {
+.product-item img {
   grid-area: image;
+  object-fit: contain;
 }
 
-.card-product h3 {
-  grid-area: title;
-  margin: 0;
-}
-.card-product .card-info {
-  grid-area: info;
-  display: flex;
-  justify-content: space-between;
-}
-.card-product .card-control {
-  grid-area: btn1 / btn1 / btn2 / btn2;;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-.card-product .rating-block {
-  grid-area: stars / stars / total / total;
+.product-item .btn {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: center;
+  padding: 8px 0;
 }
 
-.card-info p {
-  padding: 0;
+.card-title {
+  grid-area: title;
   margin: 0;
+  padding: 0;
+}
+
+.card-type {
+  grid-area: type;
+  margin: 0;
+}
+
+.card-price {
+  grid-area: price;
+  margin: 0;
+  text-align: end;
 }
 
 .card-details {
@@ -852,25 +849,7 @@ input {
   grid-area: btn2;
 }
 
-.btn-total-rating {
-  grid-area: total;
-}
-
-.btn.btn-total-rating {
-  margin: 0;
-  font-weight: 400;
-  color: #333333;
-  background: #F2F2F2;
-}
-
-.card-product .btn {
-  width: 100%;
-  text-align: center;
-  padding: 8px 0;
-}
-
 .rating-star-list {
-  width: 100%;
   grid-area: stars;
   display: flex;
   align-items: center;
@@ -882,6 +861,14 @@ input {
 
 .start-list-item.hidden {
   display: none;
+}
+
+.btn-total-rating {
+  grid-area: total;
+  margin: 0;
+  font-weight: 400;
+  color: #333333;
+  background: #F2F2F2;
 }
 
 /* pagination */
