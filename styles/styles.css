@@ -283,7 +283,7 @@ input {
   background-color: transparent;
 }
 
-.btn-view {
+.toggle-view {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -296,21 +296,21 @@ input {
   background: transparent;
 }
 
-.btn-view.active {
+.toggle-view.active {
   border: 2px solid #000000;
 }
 
-.btn-view:active {
-  border: 2px solid #000000;
-  background: transparent;
-}
-
-.btn-view:hover {
+.toggle-view:active {
   border: 2px solid #000000;
   background: transparent;
 }
 
-.btn-view:focus {
+.toggle-view:hover {
+  border: 2px solid #000000;
+  background: transparent;
+}
+
+.toggle-view:focus {
   border: 2px solid #68A2CA;
   background: transparent;
 }
@@ -343,8 +343,18 @@ input {
   list-style: none;
 }
 
-.nav-item.active {
-  border-bottom: 2px solid #756257;
+.nav-item {
+  position: relative;
+}
+
+.nav-item.active::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 16px;
+  right: 16px;
+  height: 2px;
+  background-color: #756257;
 }
 
 .nav-link {
