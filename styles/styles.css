@@ -238,6 +238,7 @@ input {
 }
 
 .btn:focus {
+  outline: none;
   background-color: #615048;
 }
 
@@ -258,6 +259,7 @@ input {
 }
 
 .btn-additional:focus {
+  outline: none;
   background-color: #68A2CA;
 }
 
@@ -274,6 +276,7 @@ input {
 }
 
 .btn-selected:focus {
+  outline: none;
   background-color: #6C9E42;
 }
 
@@ -292,7 +295,8 @@ input {
 }
 
 .btn-limpid:focus {
-  border: 3px solid #83B3D3;
+  outline: 3px solid #83B3D3;
+  outline-offset: -3px;
   background-color: transparent;
 }
 
@@ -329,7 +333,8 @@ input {
 }
 
 .toggle-view:focus {
-  border: 2px solid #68A2CA;
+  outline: 2px solid #68A2CA;
+  outline-offset: -2px;
   background: transparent;
 }
 
@@ -647,12 +652,17 @@ input {
   display: flex;
 }
 
-.subscription form input[type="email"] {
+.subscription form .email-input {
   width: 452px;
   border: none;
   border-radius: 4px 0 0 4px;
   padding: 14px 0 14px 20px;
   background-color: #F2F2F2;
+}
+
+.email-input:focus {
+  outline: 3px solid #83B3D3;
+  outline-offset: -3px;
 }
 
 .subscription form .btn {
@@ -773,6 +783,11 @@ input {
   opacity: 0.6;
 }
 
+.control-input:focus-visible + .check-mark,
+.control-input:focus-visible + .radio-mark {
+  outline: 3px solid #83B3D3;
+}
+
 .filter-control:active {
   opacity: 0.3;
 }
@@ -846,6 +861,16 @@ input {
   display: flex;
   width: 143px;
 }
+
+.catalog-filter-label:hover .range-input {
+  background: #E5E5E5;
+}
+
+.range-input:focus {
+  outline: 3px solid #83B3D3;
+  outline-offset: -3px;
+}
+
 .range-input {
   width: 100%;
   padding: 12px 20px;
@@ -975,7 +1000,8 @@ input {
 
 .select-control:hover,
 .select-control:focus {
-  border: 2px solid #68A2CA;
+  outline: 2px solid #68A2CA;
+  outline-offset: -2px;
 }
 
 .select-control:disabled {
