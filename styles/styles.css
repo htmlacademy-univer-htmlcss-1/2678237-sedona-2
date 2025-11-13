@@ -949,8 +949,42 @@ input {
   margin: 0 auto 0 0;
 }
 
-.select-control {
+.select-control-wrapper {
+  position: relative;
+  width: 292px;
   margin-right: 70px;
+}
+
+.select-control {
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 21px;
+  appearance: none;
+}
+
+.icon-select {
+  position: absolute;
+  right: 20px;
+  top: 21px;
+  fill: #000000;
+}
+
+.select-control:hover,
+.select-control:focus {
+  border: 2px solid #68A2CA;
+}
+
+.select-control:disabled {
+  color: #0000004D;
+  border: 2px solid #0000004D;
+}
+
+.select-control:disabled + .icon-select {
+  fill: #0000004D;
 }
 
 .control-view-product {
