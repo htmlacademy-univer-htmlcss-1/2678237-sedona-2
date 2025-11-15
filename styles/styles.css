@@ -74,14 +74,11 @@ input {
 }
 
 .section-intro {
-  padding: 69px 0;
-  margin-bottom: 21px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
-.section-intro .headline {
-  margin-bottom: 25px;
-}
-
 
 /* типографика */
 
@@ -483,6 +480,12 @@ input {
   margin: 0 auto;
 }
 
+.advantages .section-intro {
+  gap: 25px;
+  padding: 69px 0;
+  margin-bottom: 21px;
+}
+
 .advantage-list {
   display: flex;
   flex-wrap: wrap;
@@ -554,6 +557,11 @@ input {
   margin: 0 auto;
 }
 
+.conditions .section-intro {
+  gap: 20px;
+  padding: 64px 0;
+}
+
 .condition-list {
   display: flex;
   justify-content: space-between;
@@ -611,9 +619,7 @@ input {
   margin: 0 auto;
   padding-top: 96px;
   padding-bottom: 104px;
-
-  background: #82b3d3 url("../images/ui-background/bg_filters.jpg") no-repeat center center;
-  background-size: cover;
+  background: #82b3d3 url("../images/ui-background/bg-subscribe.jpg") no-repeat center center;
 }
 
 .subscription-content {
@@ -655,6 +661,7 @@ input {
 .subscription form .email-input {
   width: 452px;
   border: none;
+  box-sizing: border-box;
   border-radius: 4px 0 0 4px;
   padding: 14px 0 14px 20px;
   background-color: #F2F2F2;
@@ -666,6 +673,7 @@ input {
 }
 
 .subscription form .btn {
+  font-size: 20px;
   line-height: 36px;
   border-radius: 0 4px 4px 0;
   padding: 8px 50px;
@@ -948,6 +956,7 @@ input {
 
 .catalog-products {
   padding-top: 50px;
+  padding-bottom: 60px;
 }
 
 .catalog-products-wrapper {
