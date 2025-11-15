@@ -71,7 +71,7 @@
           <ul class="advantage-list">
             <li class="advantage-item">
               <div class="advantage-item-content">
-                <p class="list-item-title">Настоящий городок</p>
+                <p class="list-item-title">Настоящий<br>городок</p>
                 <p class="list-item-desc">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
               <img class="advantages-item-image" src="images/gallery/photo-1.jpg" width="800" height="385" alt="Уютные улицы Седоны">
@@ -98,10 +98,7 @@
             <li class="advantage-item">
               <img src="images/gallery/photo-2.jpg" width="800" height="385" alt="Огромный каньен в пустыне Седоны">
               <div class="advantage-item-content">
-                <p class="list-item-title">
-                  Там есть<br/>
-                  мост дьявола
-                </p>
+                <p class="list-item-title">Там есть мост дьявола</p>
                 <p class="list-item-desc">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
             </li>
@@ -198,5 +195,129 @@
         </div>
       </footer>
     </div>
+
+    <div class="modal-container">
+      <div class="modal modal-search">
+        <div class="modal-content">
+          <h2 class="headline">Поиск гостиницы в Седоне</h2>
+
+          <button class="modal-close-btn">
+            <span class="visually-hidden">Закрыть</span>
+            <svg class="icon-modal-close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M17 4.3 15.7 3 10 8.7 4.3 3 3 4.3 8.7 10 3 15.7 4.3 17l5.7-5.7 5.7 5.7 1.3-1.3-5.7-5.7z"/></svg>
+          </button>
+
+          <form class="search-form" action="https://echo.htmlacademy.ru/" target="_blank" method="post">
+            <label class="label-input label-arrival-date" for="arrivalDate">
+              Дата Заезда:
+            </label>
+
+            <div class="wrapper-input arrival-date">
+              <input class="field-date" type="date" name="arrival-date" id="arrivalDate">
+              <span class="valid-input-status error">
+                Мы не можем отправить вас в прошлое.
+              </span>
+            </div>
+
+            <label class="label-input label-leave-date" for="leaveDate">
+              Дата Выезда:
+            </label>
+
+            <div class="wrapper-input leave-date">
+              <input class="field-date" type="date" name="leave-date" id="leaveDate">
+              <span class="valid-input-status">На эти даты есть свободные номера. Пока есть.</span>
+            </div>
+
+            <label class="label-input label-counter-adults" for="countAdults">
+              Взрослые:
+            </label>
+
+            <div class="wrapper-counter counter-adults">
+              <button
+                class="btn-count btn-count-decrease"
+                title="Уменьшить количество взрослых"
+              >
+                <span class="wrapper-icon">
+                  <svg class="icon-count" width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0L0 2L14 2V0L0 0Z"/>
+                </svg>
+                </span>
+              </button>
+              <input
+                class="counter"
+                type="number"
+                name="count-adults"
+                id="countAdults"
+                min="0"
+                max="10"
+                value="2"
+              >
+              <button
+                class="btn-count btn-count-increase"
+                title="Увеличить количество взрослых"
+              >
+                <span class="wrapper-icon">
+                  <svg class="icon-count" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                  </svg>
+                </span>
+              </button>
+            </div>
+
+            <label class="label-input label-counter-child" for="countChildren">
+              Дети:
+              <span class="tooltip">
+                  <button class="tooltip-toggle">
+                    <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="2" height="12" fill="none" viewBox="0 0 2 12"><path fill-rule="evenodd" d="M0 0h2v2H0zm2 12H0V3h2z" clip-rule="evenodd"/></svg>
+                  </button>
+                  <span class="tooltip-text">
+                    Укажите количество детей, которые будут с&nbsp;вами, возраст которых от&nbsp;6&nbsp;до&nbsp;18&nbsp;лет. Дети до&nbsp;6&nbsp;лет размещаются бесплатно.
+                  </span>
+              </span>
+            </label>
+
+            <div class="wrapper-counter counter-children">
+              <button
+                class="btn-count btn-count-decrease"
+                title="Уменьшить количество детей"
+              >
+                <span class="wrapper-icon">
+                  <svg class="icon-count" width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L0 2L14 2V0L0 0Z"/>
+                  </svg>
+                </span>
+              </button>
+              <input
+                class="counter"
+                type="number"
+                name="count-children"
+                id="countChildren"
+                min="0"
+                max="10"
+                value="2"
+              >
+              <button
+                class="btn-count btn-count-increase"
+                title="Увеличить количество детей"
+              >
+                <span class="wrapper-icon">
+                  <svg class="icon-count" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"/>
+                  </svg>
+                </span>
+              </button>
+            </div>
+
+            <button
+              class="btn btn-additional submit-search-form"
+              type="submit"
+            >
+              Найти
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
   </body>
 </html>
